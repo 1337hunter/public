@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 int	*ft_next_set(int *arr, int m, int n)
 {

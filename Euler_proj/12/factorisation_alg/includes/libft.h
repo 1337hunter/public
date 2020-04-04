@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+extern int	g_sum;
 void		ft_putchar_fd(int fd, char c);
 void		ft_putstr_fd(int fd, char *str);
 void		ft_putnbr(int nb);
@@ -29,7 +30,7 @@ int		*ft_next_set(int *arr, int m, int n);
 int		ft_factor(int **arr, int nb);
 int		*ft_first_comb(int n);
 int		ft_check_comb(int *comb, int c, int *primes);
-int		ft_check_all_comb(int m, int n, int *primes);
+int		ft_check_all_comb(int m, int n, int *primes, int **divs);
 void		ft_control(void);
 int		ft_uniq_nums(int *arr, int len);
 int		ft_check_div(int **divs, int div, int sum, int size);

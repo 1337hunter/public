@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_check_div(int **divs, int div, int sum, int size)
 {
