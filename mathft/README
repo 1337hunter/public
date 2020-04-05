@@ -1,0 +1,3 @@
+This functions calculate any power of positive number (num > 0 in function ft_power).
+You can change presision (calculation speed) by vary parameters 'k' in ft_float_power
+in while loop and 'eps' in ft_sqrt.
