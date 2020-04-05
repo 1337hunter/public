@@ -43,25 +43,27 @@ long double	ft_float_power(long double num, long double power)
 
 long double	ft_power(long double num, long double power)
 {
-	long double	rez_int;
-	long double	rez_float;
-	
-	rez_int = 0;
-	rez_float = 0;
-	if (power == (long double)(int)power)
-	{
+	long double	rez;
+	int		flag;
+
+	flag = 1;
+	if (power < 0)
+		flag = -1;
+	if (power == (long double)(int)power && flag == 1)
 		return (ft_int_power(num, power));
-	}
+	else if (power == (long double)(int)power && flag == -1)
+		return (1.0 / (ft_int_power(num, power * flag)));
 	else if (num < 0)
 	{
-		write(2, "error: in function ft_power: num < 0 ", 37);
-		write(2, "(use complex type)\n", 19);
-		return (-1);
+		write(2, "error: ft_power: num < 0 (use complex type)\n", 44);
+		return (0);
 	}
 	else
 	{
-		rez_int = ft_int_power(num, (int)power);
-		rez_float = ft_float_power(num, power - (int)power);
+		rez = ft_int_power(num, (int)power * flag) *
+			ft_float_power(num, flag * (power - (int)power));
 	}
-	return (rez_int * rez_float);
+	if (flag == 1)
+		return (rez);
+	return (1 / rez);
 }

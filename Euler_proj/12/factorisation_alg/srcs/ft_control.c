@@ -11,10 +11,10 @@ void	ft_control(void)
 
 	primes = 0;
 	nb = 1;
-	while (g_sum < 600)
+	while (g_sum < 1000)
 	{
 		g_sum = 0;
-		div_arr = (int*)malloc(sizeof(int) * 1300);
+		div_arr = (int*)malloc(sizeof(int) * 2000);
 		nb++;
 		n = ft_factor(&primes, nb * (nb + 1) / 2);
 		m = 0;
