@@ -2,7 +2,7 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 /*****************************************************************************************
 You have to run program with pipe like: "cat numbers | ./prog"
 
-! This progran is able to calculate sum of any numbers which could be written 
+! This progran is able to calculat the sum of any numbers which could be written 
 like 15 digits by 8 digits.
 
 For example:
