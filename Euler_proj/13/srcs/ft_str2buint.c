@@ -1,5 +1,7 @@
 #include <stdlib.h>
 
+int	ft_strlen(char *str);
+
 int	*ft_str2buint(char *str)
 {
 	int	digit;
@@ -15,7 +17,7 @@ int	*ft_str2buint(char *str)
 	{
 		if (out[k] >= 10000000)
 		{
-			out[k] = out[k-- + 1] / 1000000000;
+			k--;
 			digit = 1;
 		}
 		out[k] += digit * (str[l] - '0');
