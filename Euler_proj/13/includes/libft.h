@@ -6,4 +6,5 @@
 
 char	*ft_strdup_size(char *src, int o_size);
 void    ft_putstr2(char **map);
+int	ft_strlen(char *str);
 #endif
