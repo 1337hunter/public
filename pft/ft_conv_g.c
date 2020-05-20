@@ -99,7 +99,7 @@ static char *my_conv_g(double nb, int *fl)
     out[0] = '0';
     out[1] = '0';
     fl[14] = 2;
-    if (nb  < 0 || *((long *)&nb) == 0x8000000000000000)
+    if (nb  < 0 || *((unsigned long *)&nb) == 0x8000000000000000)
     {
         out[i++] = '-';
         nb = -nb;

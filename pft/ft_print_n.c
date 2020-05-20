@@ -45,5 +45,7 @@ static void    my_print_n(va_list params,int *flag, int *total, void *point)
 void    ft_print_n(va_list params, int *flag, int *total)
 {
     void    *point;
+
+    point = 0;
     my_print_n(params, flag, total, point);
 }

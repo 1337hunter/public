@@ -24,6 +24,7 @@ int	ft_round(char *s)
 		}
 	else if (s[1] == '.')
 		if (s[2] >= '5' && s[2] <= '9')
+		{
 			if (s[0] >= '0' && s[0] < '9')
 				s[0]++;
 			else
@@ -33,5 +34,6 @@ int	ft_round(char *s)
 					s[0] = '0';
 				return (1);
 			}
+		}
 	return (0);
 }
