@@ -49,8 +49,5 @@ void        ft_print_infnan(char *s, int *flag, int *total, int w);
 int		    ft_get_digits(int n);
 int         ft_get_exp(char *s);
 int         ft_round(char *s);
-
 char        *ft_place_dot(char *s, int exp, int prec);
-void        *ft_swap(char *a, char *b);
-void        ft_find_dot_swap(char *s);
 #endif

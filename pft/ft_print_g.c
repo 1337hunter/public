@@ -16,23 +16,31 @@
 	#include <stdio.h>
 static char	*my_formating(int *fl, char *s, int prec, int *exp)
 {
+	int		i;
+	int 	point;
+
+	i = 0;
+	point = 0;
+	fl[17] = ft_get_exp(s);
+	while (s[i] == '0' || s[i] == '.')
+		i++;
+	while (point < prec && s[i + point] != '.')
+		point++;
+	point = (s[i + point] == '.' ? 1 : 0);
+	if (!fl[11] && fl[2])
+		ft_round(&s[i] + (prec == 0 ? 0 : prec - 1) + point);
+	else if (fl[11] && fl[2] && prec && *exp > -4 && *exp <= 0)
+		ft_round(s + prec + ft_abs(*exp) + point);
+	else if (!fl[2])
+		ft_round(&s[i] + 5);
+	else if (fl[11] && prec && fl[2])
+		ft_round(&s[i] + (prec == 0 ? 0 : prec - 1));
+	else if (fl[11] && !prec && fl[2])
+		ft_round(&s[i]);
+	if (i == 0 && s[-1] != '0' && s[0] == '0')
+		s--;
 	*exp = ft_get_exp(s);
 	s = ((*exp < -4 || *exp >= 6) ? ft_place_dot(s, *exp, prec) : s);
-	if (!fl[11] && fl[2] && (*exp >= 6 || *exp < -4))
-		ft_round(s + prec);
-	else if (!fl[2] && !fl[11] && (*exp >= 6 || *exp < -4))
-		ft_round(s + 6);
-	//else if (fl[11] && !prec)
-		//ft_round(s + 4);
-	//else if (fl[11] && prec)
-		//ft_round(s + prec);
-	if (*s == '0' && (*exp >= 6 || *exp < -4))
-	{
-		(*exp)++;
-		s--;
-	}
-	if ((*exp < -4 || *exp >= 6))
-		ft_find_dot_swap(s);
 	return (s);
 }
 

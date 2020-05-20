@@ -18,9 +18,9 @@ SRCS = 	./ft_printf.c ./ft_conv_x.c ./ft_conv_xxx.c ./ft_conv_lu.c \
        	./ft_abcdef.c ./ft_big_abcdef.c ./ft_flags.c ./ft_lhflags.c 	\
 	./ft_convs.c ./ft_get_digits.c ./ft_print_c.c ./ft_print_s.c	\
 	./ft_print_p.c  ./ft_conv_p.c ./ft_print_d.c ./ft_print_u.c \
-	./ft_conv_u.c ./ft_print_x.c ./ft_print_n.c ./ft_conv_lu.c ./ft_get_exp.c \
+	 ./ft_print_x.c ./ft_print_n.c ./ft_conv_lu.c ./ft_get_exp.c \
 	./ft_conv_f.c ./ft_print_f.c ./ft_flags_f.c ./ft_ibzero.c \
-	./ft_print_infnan.c ./ft_conv_ld.c ./ft_find_dot_swap.c\
+	./ft_print_infnan.c ./ft_conv_ld.c \
 	./ft_round.c ./ft_print_exp.c ./ft_print_formatted_g 
 	
 	

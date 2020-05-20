@@ -6,7 +6,7 @@
 /*   By: gbright <gbright@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 16:26:29 by gbright           #+#    #+#             */
-/*   Updated: 2020/05/14 14:03:45 by gbright          ###   ########.fr       */
+/*   Updated: 2020/05/20 08:10:00 by gbright          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
+long				ft_abs(long a);
 int					ft_lstsize(t_list *lst);
 int					ft_tolower(int c);
 int					ft_toupper(int c);

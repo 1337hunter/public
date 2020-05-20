@@ -6,7 +6,7 @@
 #    By: gbright <gbright@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/29 22:01:11 by gbright           #+#    #+#              #
-#    Updated: 2020/05/14 14:03:08 by gbright          ###   ########.fr        #
+#    Updated: 2020/05/20 08:10:20 by gbright          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = 	./ft_memset.c	./ft_bzero.c	./ft_memcpy.c	./ft_memccpy.c	\
 	./ft_substr.c	./ft_strjoin.c	./ft_strtrim.c	./ft_split.c	\
 	./ft_itoa.c	./ft_strmapi.c	./ft_putchar_fd.c	./ft_max.c		\
 	./ft_putstr_fd.c		./ft_putendl_fd.c		./ft_min.c		\
-	./ft_putnbr_fd.c 		
+	./ft_putnbr_fd.c ./ft_abs.c
 
 OBJ = $(SRCS:.c=.o)
 

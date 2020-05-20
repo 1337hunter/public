@@ -496,8 +496,8 @@ void    test_bonus(void)
     if (wwat != wat)
         return ;
     printf("89___________________\n");
-    wat = ft_printf("|%#+-g|\n", -1.0);
-    wwat =   printf("|%#+-g|\n", -1.0);
+    wat = ft_printf("|%#+-g|\n", 0.0);
+    wwat =   printf("|%#+-g|\n", 0.0);
     if (wwat != wat)
         return ;
     printf("90___________________\n");
@@ -630,8 +630,13 @@ if (wwat != wat)
     if (wwat != wat)
         return ;
     printf("115___________________\n");
-    wat =  ft_printf("|%#-g|\n", 0.0000999999999999333);
-    wwat =    printf("|%#-g|\n", 0.0000999999999999333);
+    wat =  ft_printf("|%-g|\n", 0.00000999999999999333);
+    wwat =    printf("|%-g|\n", 0.00000999999999999333);
+    if (wwat != wat)
+        return ;
+    printf("115.1___________________\n");
+    wat =  ft_printf("|%-g|\n", 0.0000999999999999333);
+    wwat =    printf("|%-g|\n", 0.0000999999999999333);
     if (wwat != wat)
         return ;
     printf("116___________________\n");
@@ -642,16 +647,55 @@ if (wwat != wat)
     printf("96___________________\n");
     wat =  ft_printf("|%#-.13g|\n", 0.000999999999999333);
     wwat =    printf("|%#-.13g|\n", 0.000999999999999333);
-    if (wwat != wat)
-        return ;
-    printf("97___________________\n");
+   // if (wwat != wat)
+        //return ;
+    printf("97.0___________________\n");
     wat =  ft_printf("|%#-.15g|\n", 0.0009999999999993);
     wwat =    printf("|%#-.15g|\n", 0.0009999999999993);
+    if (wwat != wat)
+        return ;
+    printf("97.1___________________\n");
+    wat =  ft_printf("|%#-.15g|\n", 0.00009999999999993);
+    wwat =    printf("|%#-.15g|\n", 0.00009999999999993);
+    if (wwat != wat)
+        return ;
+    printf("97.2___________________\n");
+    wat =  ft_printf("|%#-.15g|\n", 0.009999999999993);
+    wwat =    printf("|%#-.15g|\n", 0.009999999999993);
+    if (wwat != wat)
+        return ;
+    printf("97.3.0___________________\n");
+    wat =  ft_printf("|%#-.15g|\n", 0.09999999999993666);
+    wwat =    printf("|%#-.15g|\n", 0.09999999999993666);
+    if (wwat != wat)
+        return ;
+    printf("97.3.1___________________\n");
+    wat =  ft_printf("|%-.15g|\n", 0.9999999999993666);
+    wwat =    printf("|%-.15g|\n", 0.9999999999993666);
+    if (wwat != wat)
+        return ;
+    printf("97.3.2___________________\n");
+    wat =  ft_printf("|%-.15g|\n", 9.999999999993666);
+    wwat =    printf("|%-.15g|\n", 9.999999999993666);
+    if (wwat != wat)
+        return ;
     printf("98___________________\n");
     wat =  ft_printf("|%#-.13g|\n", 99999999999933.0);
     wwat =    printf("|%#-.13g|\n", 99999999999933.0);
     if (wwat != wat)
         return ;
+    printf("99___________________\n");
+    wat =  ft_printf("|%-13g|\n", 99999999999933.0);
+    wwat =    printf("|%-13g|\n", 99999999999933.0);
+    if (wwat != wat)
+        return ;
+    printf("100___________________\n");
+    wat =  ft_printf("|%#-13g|\n", 99999999999933.0);
+    wwat =    printf("|%#-13g|\n", 99999999999933.0);
+    if (wwat != wat)
+        return ;
+    //if (wwat != wat)
+      //  return ;
     // flags: -, 0, ., *, num;
     // convs: c, s, p, d, i, u, x, X, %;
     // convs bonus: n, f, g, e;
