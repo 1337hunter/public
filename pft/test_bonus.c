@@ -46,7 +46,7 @@ void    test_bonus(void)
     short int stdshi;
     ft_printf("012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789%hn\n", &ftshi);
     printf("012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789%hn\n", &stdshi);
-    printf("ft_ = %hhd\nstd = %hhd\n", ftshi, stdshi);
+    printf("ft_ = %hhd\nstd = %hhd\n", (char)ftshi, (char)stdshi);
     if (ftshi != stdshi)
         return ;
     printf("7___________________\n");
@@ -225,11 +225,11 @@ void    test_bonus(void)
     wat = ft_printf("|%5f|\n", +0.0 / 0.0);
     wwat =   printf("|%5f|\n", +0.0 / 0.0);
     printf("41___________________\n");
-    wat = ft_printf("|%-012f|\n", +0.0 / 0.0);
-    wwat =   printf("|%-012f|\n", +0.0 / 0.0);
+    wat = ft_printf("|%012f|\n", +0.0 / 0.0);
+    wwat =   printf("|%012f|\n", +0.0 / 0.0);
     printf("42___________________\n");
-    wat = ft_printf("|%-012.123f|\n", 0.0 / 0.0);
-    wwat =   printf("|%-012.123f|\n", 0.0 / 0.0);
+    wat = ft_printf("|%012.123f|\n", 0.0 / 0.0);
+    wwat =   printf("|%012.123f|\n", 0.0 / 0.0);
     printf("43___________________\n");
     wat = ft_printf("|%+f|\n", 0.0 / 0.0);
     wwat =   printf("|%+f|\n", 0.0 / 0.0);
@@ -247,23 +247,23 @@ void    test_bonus(void)
     if (wwat != wat)
         return ;
     printf("47___________________\n");
-    wat = ft_printf("|%+ 5f|\n", 1.0 / 0.0);
-    wwat =   printf("|%+ 5f|\n", 1.0 / 0.0);
+    wat = ft_printf("|%+5f|\n", 1.0 / 0.0);
+    wwat =   printf("|%+5f|\n", 1.0 / 0.0);
     if (wwat != wat)
         return ;
     printf("48___________________\n");
-    wat = ft_printf("|%+ 5g|\n", 1.0 / 0.0);
-    wwat =   printf("|%+ 5g|\n", 1.0 / 0.0);
+    wat = ft_printf("|% 5g|\n", 1.0 / 0.0);
+    wwat =   printf("|% 5g|\n", 1.0 / 0.0);
     if (wwat != wat)
         return ;
     printf("49___________________\n");
-    wat = ft_printf("|%+ 5g|\n", -1.0 / 0.0);
-    wwat =   printf("|%+ 5g|\n", -1.0 / 0.0);
+    wat = ft_printf("|% 5g|\n", -1.0 / 0.0);
+    wwat =   printf("|% 5g|\n", -1.0 / 0.0);
     if (wwat != wat)
         return ;
     printf("50___________________\n");
-    wat = ft_printf("|%+ 5g|\n", 0.0 / 0.0);
-    wwat =   printf("|%+ 5g|\n", 0.0 / 0.0);
+    wat = ft_printf("|% 5g|\n", 0.0 / 0.0);
+    wwat =   printf("|% 5g|\n", 0.0 / 0.0);
     if (wwat != wat)
         return ;
     printf("51___________________\n");

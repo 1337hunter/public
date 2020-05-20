@@ -130,8 +130,8 @@ void    test_mandatory(void)
     wat = ft_printf("|%*.*p|\n", 1, 5, (void*)0);
     wwat = printf("|%*p|\n", 1, (void*)0);
     printf("16___________________|\n");
-    wat = ft_printf("|%p11|\n", (void*)1, &wat);
-    wwat = printf("|%p11|\n", (void*)1, &wat);
+    wat = ft_printf("|%p11|\n", (void*)1);
+    wwat = printf("|%p11|\n", (void*)1);
     if (wwat != wat)
     {
         write(1, "16: KO\n", 7);
@@ -256,8 +256,8 @@ void    test_mandatory(void)
         write(1, "33: KO\n", 7);
     }
     ft_printf("34___________\n");
-    wat = ft_printf("|%-0*.10d|\n", 20, -123);
-    wwat = printf("|%-020.10d|\n", -123);
+    wat = ft_printf("|%0*.10d|\n", 20, -123);
+    wwat = printf("|%020.10d|\n", -123);
     if (wwat != wat)
     {
         write(1, "34: KO\n", 7);
@@ -272,8 +272,8 @@ void    test_mandatory(void)
     ft_printf("~~~~~~~~~~~~~~~~~Test %%i~~~~~~~~~~~~~~~~~~\n");
     printf("~~~~~~~~~~~~~~~~~Test %%i~~~~~~~~~~~~~~~~~~\n");
     ft_printf("36___________\n");
-    wat = ft_printf("|%-+0*.10i|%c\n", 20, -123, 0);
-    wwat = printf("|%-+0*.10d|%c\n", 20, -123, 0);
+    wat = ft_printf("|%+0*.10i|%c\n", 20, -123, 0);
+    wwat = printf("|%+0*.10d|%c\n", 20, -123, 0);
     if (wwat != wat)
     {
         write(1, "36: KO\n", 7);
@@ -354,8 +354,8 @@ void    test_mandatory(void)
     if (wwat != wat)
         return ;
     ft_printf("52___________\n");
-    wat = ft_printf("|%-0*.10i|\n", 20, -123);
-    wwat = printf("|%-0*.10i|\n", 20, -123);
+    wat = ft_printf("|%0*.10i|\n", 20, -123);
+    wwat = printf("|%0*.10i|\n", 20, -123);
     if (wwat != wat)
         return ;
     ft_printf("53___________\n");
@@ -364,8 +364,8 @@ void    test_mandatory(void)
     if (wwat != wat)
         return ;
     ft_printf("54___________\n");
-    wat = ft_printf("|%-+0*.10i|%c\n", 20, -123, 0);
-    wwat = printf("|%-+0*.10i|%c\n", 20, -123, 0);
+    wat = ft_printf("|%-+*.10i|%c\n", 20, -123, 0);
+    wwat = printf("|%-+*.10i|%c\n", 20, -123, 0);
     if (wwat != wat)
         return ;
     ft_printf("~~~~~~~~~~~~~~~~~Test %%uu~~~~~~~~~~~~~~~~~~~\n");
@@ -375,18 +375,18 @@ void    test_mandatory(void)
     if (wwat != wat)
         return ;
     ft_printf("56___________\n");
-    wat = ft_printf("|%-+*.10u|%c\n", 20, 123, 0);
-    wwat = printf("|%-+*.10u|%c\n", 20, 123, 0);
+    wat = ft_printf("|%-*.10u|%c\n", 20, 123, 0);
+    wwat = printf("|%-*.10u|%c\n", 20, 123, 0);
     if (wwat != wat)
         return ;
     ft_printf("57___________\n");
     wat = ft_printf("|% *.10u|%c\n", 20, 123, 0);
-    wwat = printf("|% *.10u|%c\n", 20, 123, 0);
+    wwat = printf("|%*.10u|%c\n", 20, 123, 0);
     if (wwat != wat)
         return ;
     ft_printf("58___________\n");
-    wat = ft_printf("|%+u|%c\n", 20);
-    wwat = printf("|%+u|%c\n", 20);
+    wat = ft_printf("|%u|%c\n", 20);
+    wwat = printf("|%u|%c\n", 20);
     if (wwat != wat)
         return ;
     ft_printf("59___________\n");
@@ -483,8 +483,8 @@ void    test_mandatory(void)
     if (wwat != wat)
         return ;
     ft_printf("74___________\n");
-    wat = ft_printf("|%+++x|\n", 33);
-    wwat = printf("|%+++x|\n", 33);
+    wat = ft_printf("|%x|\n", 33);
+    wwat = printf("|%x|\n", 33);
     if (wwat != wat)
         return ;
     ft_printf("74___________\n");
