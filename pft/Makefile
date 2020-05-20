@@ -6,7 +6,7 @@
 #    By: gbright <gbright@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/29 22:01:11 by gbright           #+#    #+#              #
-#    Updated: 2020/05/13 10:40:53 by gbright          ###   ########.fr        #
+#    Updated: 2020/05/20 16:53:39 by gbright          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS = 	./ft_printf.c ./ft_conv_x.c ./ft_conv_xxx.c ./ft_conv_lu.c \
 	 ./ft_print_x.c ./ft_print_n.c ./ft_conv_lu.c ./ft_get_exp.c \
 	./ft_conv_f.c ./ft_print_f.c ./ft_flags_f.c ./ft_ibzero.c \
 	./ft_print_infnan.c ./ft_conv_ld.c ./ft_swap.c \
-	./ft_round.c ./ft_print_exp.c ./ft_print_formatted_g 
+	./ft_round.c ./ft_print_exp.c ./ft_print_formatted_g.c
 	
 	
 
