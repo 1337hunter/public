@@ -6,11 +6,11 @@
 /*   By: gbright <gbright@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/11 22:03:34 by gbright           #+#    #+#             */
-/*   Updated: 2020/05/22 14:56:39 by gbright          ###   ########.fr       */
+/*   Updated: 2020/05/22 15:33:41 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "libft.h"
 #include "ftprintf.h"
 
 char		*my_fill_null(int *flag)
@@ -80,8 +80,10 @@ void		ft_print_s(va_list params, int *flag, int *total)
 	}
 	else
 	{
-		if (flag[3] || flag[5])
+		if ((flag[3] || flag[5]) && flag[2])
 			*total += ft_print_width(width - mini(pre, ft_strlen(s)), ' ');
+		if ((flag[3] || flag[5]) && !flag[2])
+			*total += ft_print_width(width - ft_strlen(s), ' ');
 		my_print_s(flag, s, total, pre);
 	}
 	if (flag[19])
